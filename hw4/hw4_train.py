@@ -14,7 +14,7 @@ def load_dataX(path):
                 s = s.replace(same_char[0], same_char[1])
             for punct in re.findall(r'(><.-「」【】『』[-/\\\\()!"+,&?\']{2,})',s):
                 s = s.replace(punct, punct[0])
-            s = re.sub("[-「」【】『』] ","",s)
+            s = re.sub("[-「」【】『』]","",s)
             sentences.append(s)
         return sentences
 
